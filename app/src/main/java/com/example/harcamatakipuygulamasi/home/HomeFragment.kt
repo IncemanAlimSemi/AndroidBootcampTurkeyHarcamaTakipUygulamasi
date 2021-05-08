@@ -93,14 +93,14 @@ class HomeFragment : Fragment() {
             adapter.changeTypeOfMoney(viewModel.getCurrentTypeOfMoney(), viewModel.getCurrentSpendingRate())
         })
 
-//        binding.radioGroupHomeFragmentMidConstraintLayout.setOnCheckedChangeListener { _, checkedID ->
-//            when(checkedID) {
-//                binding.radioButtonSpendingAddFragmentTL.id -> viewModel.setCurrentTypeOfMoney(0)
-//                binding.radioButtonSpendingAddFragmentEuro.id -> viewModel.setCurrentTypeOfMoney(1)
-//                binding.radioButtonSpendingAddFragmentDollar.id -> viewModel.setCurrentTypeOfMoney(2)
-//                binding.radioButtonSpendingAddFragmentSterling.id -> viewModel.setCurrentTypeOfMoney(3)
-//            }
-//        }
+        binding.radioGroupHomeFragmentMidConstraintLayout.setOnCheckedChangeListener { _, checkedID ->
+            when(checkedID) {
+                binding.radioButtonSpendingAddFragmentTL.id -> viewModel.setCurrentTypeOfMoney(0)
+                binding.radioButtonSpendingAddFragmentEuro.id -> viewModel.setCurrentTypeOfMoney(1)
+                binding.radioButtonSpendingAddFragmentDollar.id -> viewModel.setCurrentTypeOfMoney(2)
+                binding.radioButtonSpendingAddFragmentSterling.id -> viewModel.setCurrentTypeOfMoney(3)
+            }
+        }
 
         viewModel.goSpendingDetail.observe(viewLifecycleOwner, { newGoSpendingDetail ->
             if(newGoSpendingDetail != null) {

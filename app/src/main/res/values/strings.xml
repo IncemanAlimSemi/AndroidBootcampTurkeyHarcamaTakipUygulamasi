@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Harcama Takip Uygulamasi</string>
+    <string name="app_name">Harcama Takip Uygulaması</string>
     <string name="text_homeFragmentTopConstraintLayoutHello">Merhaba</string>
     <string name="text_homeFragmentTopConstraintLayoutUserName">Semi Bey</string>
     <string name="text_homeFragmentTopConstraintLayoutSpending">Harcamanız</string>
