@@ -47,7 +47,7 @@ class HomeViewModel(
     val userGender: LiveData<Int>
         get() = _userGender
 
-    private var _currentTypeOfMoney = MutableLiveData(1)
+    private var _currentTypeOfMoney = MutableLiveData<Int>()
     val currentTypeOfMoney: LiveData<Int>
         get() = _currentTypeOfMoney
 
@@ -55,8 +55,8 @@ class HomeViewModel(
     val totalSpending: LiveData<String>
         get() = _totalSpending
 
-    private val _goSpendingDetail = MutableLiveData<Spending>()
-    val goSpendingDetail: LiveData<Spending>
+    private val _goSpendingDetail = MutableLiveData<Spending?>()
+    val goSpendingDetail: LiveData<Spending?>
         get() = _goSpendingDetail
 
     private var _status = MutableLiveData<Boolean?>()

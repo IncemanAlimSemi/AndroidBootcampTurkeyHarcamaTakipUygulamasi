@@ -54,6 +54,7 @@ class SpendingDetailFragment : Fragment() {
         viewModel.checkGoHome.observe(viewLifecycleOwner, {
             if(it == true) {
                 this.findNavController().navigate(SpendingDetailFragmentDirections.actionSpendingDetailFragmentToHomeFragment(moneyType))
+                viewModel.goBackToHomeCompleted()
             }
         })
 

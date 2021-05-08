@@ -74,4 +74,3 @@ class SpendingDetailViewModel(
 
     fun goBackToHomeCompleted() { _checkGoHome.value = null }
 }
-
