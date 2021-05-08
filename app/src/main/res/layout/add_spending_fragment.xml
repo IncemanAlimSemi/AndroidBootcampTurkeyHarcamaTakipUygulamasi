@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".addspending.AddSpendingFragment">
+
+
+    <TextView
+        android:id="@+id/textView_spendingAddFragmentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_spendingAddFragmentTitle"
+        android:textSize="@dimen/size_spendingAddFragmentTitleText"
+        android:textColor="@color/gray"
+        android:layout_margin="@dimen/margin_spendingAddFragmentTitle" />
+
+    <View
+        android:id="@+id/view_SpendingAddFragmentLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_spendingAddFragmentLineHeight"
+        android:background="@color/gray" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_spendingAddFragmentDescription"
+        android:layout_marginTop="@dimen/margin_spendingAddFragmentDescription"
+        android:layout_marginEnd="@dimen/margin_spendingAddFragmentDescription"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_spendingAddFragmentDescription"
+        app:boxCornerRadiusBottomStart="@dimen/radius_spendingAddFragmentDescription"
+        app:boxCornerRadiusTopEnd="@dimen/radius_spendingAddFragmentDescription"
+        app:boxCornerRadiusTopStart="@dimen/radius_spendingAddFragmentDescription">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_SpendingAddFragmentDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_spendingAddFragmentDescription"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_spendingAddFragmentSpending"
+        android:layout_marginEnd="@dimen/margin_spendingAddFragmentSpending"
+        android:layout_marginTop="@dimen/marginTop_spendingAddFragmentSpending"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_spendingAddFragmentSpending"
+        app:boxCornerRadiusBottomStart="@dimen/radius_spendingAddFragmentSpending"
+        app:boxCornerRadiusTopEnd="@dimen/radius_spendingAddFragmentSpending"
+        app:boxCornerRadiusTopStart="@dimen/radius_spendingAddFragmentSpending">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_SpendingAddFragmentSpending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_spendingAddFragmentSpending"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_spendingAddFragmentSpendingType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart_spendingAddFragmentRadioGroup"
+        android:layout_marginTop="@dimen/marginTop_spendingAddFragmentRadioGroup">
+
+        <RadioButton
+            android:id="@+id/radioButton_spendingAddFragmentBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_spendingAddFragmentRadioButtonBill"
+            android:textSize="@dimen/size_spendingAddFragmentRadioButtonText"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radioButton_spendingAddFragmentRent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_spendingAddFragmentRadioButtonRent"
+            android:textSize="@dimen/size_spendingAddFragmentRadioButtonText"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radioButton_spendingAddFragmentOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_spendingAddFragmentRadioButtonOther"
+            android:textSize="@dimen/size_spendingAddFragmentRadioButtonText"
+            android:gravity="center" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_spendingAddFragmentMoneyType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/radioButton_spendingAddFragmentTL"
+        android:layout_marginStart="@dimen/marginStart_spendingAddFragmentRadioGroup"
+        android:layout_marginTop="@dimen/marginTop_spendingAddFragmentRadioGroup"
+        android:layout_marginEnd="@dimen/marginEnd_spendingAddFragmentRadioGroup">
+        <RadioButton
+            android:id="@+id/radioButton_spendingAddFragmentTL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_spendingAddFragmentTL"
+            android:textSize="@dimen/size_spendingAddFragmentRadioButtonText"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radioButton_spendingAddFragmentDollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_spendingAddFragmentDollar"
+            android:textSize="@dimen/size_spendingAddFragmentRadioButtonText"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radioButton_spendingAddFragmentEuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_spendingAddFragmentEuro"
+            android:textSize="@dimen/size_spendingAddFragmentRadioButtonText"
+            android:gravity="center" />
+
+        <RadioButton
+            android:id="@+id/radioButton_spendingAddFragmentSterling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/text_spendingAddFragmentSterling"
+            android:textSize="@dimen/size_spendingAddFragmentRadioButtonText"
+            android:gravity="center" />
+
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_spendingAddFragmentAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/marginEnd_spendingAddFragmentAddButton"
+        android:layout_marginTop="@dimen/marginTop_spendingAddFragmentButton"
+        android:backgroundTint="@color/yellow"
+        app:cornerRadius="@dimen/radius_spendingAddFragmentAddButton"
+        android:text="@string/text_spendingAddFragmentAddButton" />
+
+</LinearLayout>

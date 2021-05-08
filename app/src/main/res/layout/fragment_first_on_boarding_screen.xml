@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".onboarding.screens.FirstOnBoardingScreen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView_firstOnBoardingScreenFragmentAnimation"
+        android:layout_width="@dimen/layoutWidth_firstOnBoardingScreenFragmentAnimation"
+        android:layout_height="@dimen/layoutHeight_firstOnBoardingScreenFragmentAnimation"
+        android:layout_marginBottom="@dimen/marginBottom_firstOnBoardingScreenFragmentAnimation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView_firstOnBoardingScreenFragmentFirstDescription"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/first_on_boarding_screen_animation" />
+
+    <TextView
+        android:id="@+id/textView_firstOnBoardingScreenFragmentFirstDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_firstOnBoardingScreenFragmentFirstDescription"
+        android:textSize="@dimen/size_firstOnBoardingScreenFragmentFirstDescriptionText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView_firstOnBoardingScreenFragmentAnimation"
+        app:layout_constraintBottom_toTopOf="@+id/textView_firstOnBoardingScreenFragmentSecondDescription"/>
+
+    <TextView
+        android:id="@+id/textView_firstOnBoardingScreenFragmentSecondDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop_firstOnBoardingScreenFragmentSecondDescription"
+        android:text="@string/text_firstOnBoardingScreenFragmentSecondDescription"
+        android:textSize="@dimen/size_firstOnBoardingScreenFragmentSecondDescriptionText"
+        app:layout_constraintTop_toBottomOf="@+id/textView_firstOnBoardingScreenFragmentFirstDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_firstOnBoardingScreenFragmentNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/text_firstOnBoardingScreenFragmentNextButton"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/marginStart_firstOnBoardingScreenFragmentNextButton"
+        android:layout_marginBottom="@dimen/marginBottom_firstOnBoardingScreenFragmentNextButton"
+        app:strokeColor="@color/orange"
+        app:strokeWidth="@dimen/strokeWidth_firstOnBoardingScreenFragmentNextButton"
+        app:cornerRadius="@dimen/radius_firstOnBoardingScreenFragmentNextButton"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

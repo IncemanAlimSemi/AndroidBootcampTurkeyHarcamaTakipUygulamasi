@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".onboarding.screens.ThirdOnBoardingScreen">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView_thirdOnBoardingScreenFragmentAnimation"
+        android:layout_width="@dimen/layoutWidth_thirdOnBoardingScreenFragmentAnimation"
+        android:layout_height="@dimen/layoutHeight_thirdOnBoardingScreenFragmentAnimation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView_thirdOnBoardingScreenFragmentFirstDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/third_on_boarding_screen_animation" />
+
+    <TextView
+        android:id="@+id/textView_thirdOnBoardingScreenFragmentFirstDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_thirdOnBoardingScreenFragmentFirstDescription"
+        android:textSize="@dimen/size_thirdOnBoardingScreenFragmentFirstDescriptionText"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView_thirdOnBoardingScreenFragmentAnimation"
+        app:layout_constraintBottom_toTopOf="@+id/textView_thirdOnBoardingScreenFragmentSecondDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView_thirdOnBoardingScreenFragmentSecondDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop_thirdOnBoardingScreenFragmentSecondDescription"
+        android:text="@string/text_thirdOnBoardingScreenFragmentSecondDescription"
+        android:textSize="@dimen/size_thirdOnBoardingScreenFragmentSecondDescriptionText"
+        app:layout_constraintTop_toBottomOf="@+id/textView_thirdOnBoardingScreenFragmentFirstDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_thirdOnBoardingScreenFragmentNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/text_thirdOnBoardingScreenFragmentNextButton"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/marginStart_thirdOnBoardingScreenFragmentNextButton"
+        android:layout_marginBottom="@dimen/marginBottom_thirdOnBoardingScreenFragmentNextButton"
+        app:strokeColor="@color/orange"
+        app:strokeWidth="@dimen/strokeWidth_thirdOnBoardingScreenFragmentNextButton"
+        app:cornerRadius="@dimen/radius_thirdOnBoardingScreenFragmentNextButton"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

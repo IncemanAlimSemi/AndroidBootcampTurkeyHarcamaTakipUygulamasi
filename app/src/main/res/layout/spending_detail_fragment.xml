@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".spendingdetail.SpendingDetailFragment">
+
+    <ImageButton
+        android:id="@+id/imageButton_spendingDetailFragment"
+        android:src="@drawable/ic_back"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="@dimen/marginTop_spendingDetailFragmentImageButton"
+        android:layout_marginStart="@dimen/marginStart_spendingDetailFragmentImageButton"
+        android:layout_width="@dimen/layoutWidth_spendingDetailFragmentImageButton"
+        android:layout_height="@dimen/layoutHeight_spendingDetailFragmentImageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/contentDescription_spendingDetailFragmentImageButton"/>
+
+    <ImageView
+        android:id="@+id/imageView_spendingDetailFragment"
+        android:layout_width="@dimen/layoutWidth_spendingDetailFragmentImageView"
+        android:layout_height="@dimen/layoutHeight_spendingDetailFragmentImageView"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textView_spendingDetailFragmentDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/contentDescription_spendingDetailFragmentImageView"/>
+
+    <TextView
+        android:id="@+id/textView_spendingDetailFragmentDescription"
+        android:textSize="@dimen/size_spendingDetailFragmentDescriptionText"
+        android:layout_marginTop="@dimen/marginTop_spendingDetailFragmentDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageView_spendingDetailFragment"
+        app:layout_constraintBottom_toTopOf="@id/textView_spendingDetailFragmentMoney"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView_spendingDetailFragmentMoney"
+        android:textSize="@dimen/size_spendingDetailFragmentMoneyText"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/marginTop_spendingDetailFragmentMoneyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textView_spendingDetailFragmentDescription"
+        app:layout_constraintBottom_toTopOf="@id/button_spendingDetailFragmentDelete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_spendingDetailFragmentDelete"
+        android:text="@string/text_spendingDetailFragmentDeleteButton"
+        app:cornerRadius="@dimen/radius_spendingDetailFragmentDeleteButton"
+        app:backgroundTint="@color/orange"
+        android:layout_marginTop="@dimen/marginTop_spendingDetailFragmentDeleteButton"
+        android:layout_marginBottom="@dimen/marginBottom_spendingDetailFragmentDeleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textView_spendingDetailFragmentMoney"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

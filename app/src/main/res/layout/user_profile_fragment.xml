@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".userprofile.UserProfileFragment">
+
+
+        <TextView
+            android:id="@+id/textView_userNameFragmentTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text_userNameFragmentTitle"
+            android:textSize="@dimen/size_userNameFragmentTitleText"
+            android:textColor="@color/gray"
+            android:layout_margin="@dimen/margin_userNameFragmentTitle" />
+
+        <View
+            android:id="@+id/view_userNameFragmentLine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_userNameFragmentLineHeight"
+            android:background="@color/gray" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_userNameFragmentNameInput"
+            android:layout_marginEnd="@dimen/margin_userNameFragmentNameInput"
+            android:layout_marginTop="@dimen/marginTop_userNameFragmentNameInput"
+            app:boxCornerRadiusBottomEnd="@dimen/radius_userNameFragmentNameInput"
+            app:boxCornerRadiusBottomStart="@dimen/radius_userNameFragmentNameInput"
+            app:boxCornerRadiusTopEnd="@dimen/radius_userNameFragmentNameInput"
+            app:boxCornerRadiusTopStart="@dimen/radius_userNameFragmentNameInput">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText_userNameFragmentNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_userNameFragmentNameInput"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup_userNameFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/marginStart_userNameFragmentRadioGroup"
+            android:layout_marginTop="@dimen/marginTop_userNameFragmentRadioGroup">
+
+            <RadioButton
+                android:id="@+id/radioButton_userNameFragmentMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_userNameFragmentRadioButtonMale"
+                android:textSize="@dimen/size_userNameFragmentRadioButtonMaleText"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/radioButton_userNameFragmentFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_userNameFragmentRadioButtonFemale"
+                android:textSize="@dimen/size_userNameFragmentRadioButtonFemaleText"
+                android:gravity="center" />
+
+            <RadioButton
+                android:id="@+id/radioButton_userNameFragmentOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_userNameFragmentRadioButtonOthers"
+                android:textSize="@dimen/size_userNameFragmentRadioButtonOthersText"
+                android:gravity="center" />
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_userNameFragmentSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/marginEnd_userNameFragmentSaveButton"
+            android:layout_marginTop="@dimen/marginTop_userNameFragmentSaveButton"
+            android:backgroundTint="@color/yellow"
+            app:cornerRadius="@dimen/radius_userNameFragmentSaveButton"
+            android:text="@string/text_userNameFragmentSaveButton" />
+
+</LinearLayout>
